@@ -28,6 +28,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".InstructionsActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

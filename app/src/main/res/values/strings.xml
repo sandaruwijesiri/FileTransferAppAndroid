@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">FileTransferApp</string>
+    <string name="instructions">
+    Instructions:
+    \n
+    \n
+                 \u0009 1. Connect both devices to the same LAN.
+    \n
+                 \u0009 2. Click the \'Receive\' button on the receiving device.
+    \n
+                 \u0009 3. Click the \'Send\' button on the transmitting device.
+    \n
+                 \u0009 4. Select the IP address of the receiving device from the list.
+    \n
+                 \u0009 5. Choose file/files to send.
+    \n
+                 \u0009 6. Wait until the operation is completed.
+    \n
+    \n
+    Setting your network adapter to use the 5GHz band can dramatically improve the transfer speed. You can enable this in your network settings.
+    \n
+    \n
+    Using mobile hotspot can also speed things up since then a router won\'t be a bottleneck.</string>
 </resources>

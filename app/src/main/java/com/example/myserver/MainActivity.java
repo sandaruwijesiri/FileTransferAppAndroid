@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity  {
 
     Button receiveFileButton;
     Button sendFileButton;
-
+    Button instructionsButton;
     Button refreshIPsButton;
     RecyclerView availableIPsRecyclerView;
     RecyclerViewAdapter adapter;
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity  {
 
         receiveFileButton = findViewById(R.id.receiveFileButton);
         sendFileButton = findViewById(R.id.sendFileButton);
-
+        instructionsButton = findViewById(R.id.instructionsButton);
         refreshIPsButton = findViewById(R.id.refreshIPsButton);
         availableIPsRecyclerView = findViewById(R.id.availableIPsRecyclerView);
         availableIPsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity  {
 
         refreshIPsButton.setOnClickListener(refreshIPsOnClickListener);
         receiveFileButton.setOnClickListener(receiveFileOnClickListener);
+        instructionsButton.setOnClickListener(instructionsButtonOnClickListener);
         sendFileButton.setOnClickListener(sendFileOnClickListener);
     }
 
@@ -155,6 +156,14 @@ public class MainActivity extends AppCompatActivity  {
             }
         }).start();
     }
+
+    public View.OnClickListener instructionsButtonOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), InstructionsActivity.class);
+            startActivity(intent);
+        }
+    };
 
     public View.OnClickListener refreshIPsOnClickListener = new View.OnClickListener() {
         @Override
@@ -366,6 +375,8 @@ public class MainActivity extends AppCompatActivity  {
         receiveFileButton.setBackgroundColor(Color.parseColor("#888888"));
         refreshIPsButton.setClickable(false);
         refreshIPsButton.setBackgroundColor(Color.parseColor("#888888"));
+        instructionsButton.setClickable(false);
+        instructionsButton.setBackgroundColor(Color.parseColor("#888888"));
     }
 
     public void enableViews(){
@@ -375,6 +386,8 @@ public class MainActivity extends AppCompatActivity  {
         receiveFileButton.setBackgroundColor(Color.parseColor("#FF6200EE"));
         refreshIPsButton.setClickable(true);
         refreshIPsButton.setBackgroundColor(Color.parseColor("#FF6200EE"));
+        instructionsButton.setClickable(true);
+        instructionsButton.setBackgroundColor(Color.parseColor("#FF6200EE"));
     }
 
     private void receiveFile() throws Exception{
